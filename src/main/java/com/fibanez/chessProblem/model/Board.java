@@ -15,16 +15,13 @@ public class Board {
 
     private final int numRows;
     private final int numCols;
-
-    private ChessPiece[][] board;
-
-    private Stack<ChessPiece> piecesOnBoard;
+    private final ChessPiece[][] board;
+    private final Stack<ChessPiece> piecesOnBoard;
 
     public Board(int nRows, int nCols) {
         this.numRows = nRows;
         this.numCols = nCols;
         this.board = new ChessPiece[nRows][nCols];
-
         this.piecesOnBoard = new Stack<>();
     }
 
