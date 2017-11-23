@@ -63,7 +63,7 @@ public class Board {
 
     public void print() {
         System.out.println("-");
-        System.out.println(this.toString());
+        System.out.println(this);
     }
 
     @Override
