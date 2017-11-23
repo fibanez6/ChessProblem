@@ -33,7 +33,7 @@ public class ChessProblem {
         resolve(buffer,lastPositionByType);
     }
 
-    public void resolve(LinkedList<ChessPiece> buffer, Map<String, Point> lastPositionByType) {
+    private void resolve(LinkedList<ChessPiece> buffer, Map<String, Point> lastPositionByType) {
 
         // solution base
         if (buffer.isEmpty()) {
