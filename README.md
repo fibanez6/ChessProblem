@@ -19,12 +19,12 @@ for a 7×7 board with 2 Kings, 2 Queens, 2 Bishops and 1 Knight.
 Input: 3×3 board containing 2 Kings and 1 Rook.
 Output:
 
-<image>
+![3x3](https://github.com/fibanez6/ChessProblem/blob/master/chessSolution3x3.jpg)
 
 Input: 4×4 board containing 2 Rooks and 4 Knights.
 Output:
 
-<image>
+![4x4](https://github.com/fibanez6/ChessProblem/blob/master/chessSolution4x4.jpg)
 
 
 ## REQUIREMENTS
