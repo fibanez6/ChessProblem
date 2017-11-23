@@ -62,19 +62,25 @@ public class Board {
     }
 
     public void print() {
-        Arrays.stream(board)
-            .forEach(
-                (row) -> {
-                    Arrays.stream(row)
-                        .forEach(
-                            (el) -> {
-                                String symbol = (el == null) ? PieceEnum.BLANK.getSymbol() : el.getSymbol();
-                                System.out.print(" " + symbol + " ");
-                            });
-                    System.out.println();
-                }
-            );
+        System.out.println("-");
+        System.out.println(this.toString());
+    }
 
-        System.out.println();
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        Arrays.stream(board)
+                .forEach(
+                        (row) -> {
+                            Arrays.stream(row)
+                                    .forEach(
+                                            (el) -> {
+                                                String symbol = (el == null) ? PieceEnum.BLANK.getSymbol() : el.getSymbol();
+                                                sb.append(" " + symbol + " ");
+                                            });
+                            sb.append(System.lineSeparator());
+                        }
+                );
+        return sb.toString();
     }
 }
