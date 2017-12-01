@@ -37,6 +37,15 @@ public class Board {
     }
 
     public void putPiece(ChessPiece piece) {
+        if (piece == null) {
+            return;
+        }
+        if (piece.getRow() < 0 || piece.getCol() < 0) {
+            return;
+        }
+        if (piece.getRow() >= numRows || piece.getCol() >= numCols) {
+            return;
+        }
         this.board[piece.getRow()][piece.getCol()] = piece;
         this.piecesOnBoard.push(piece);
     }

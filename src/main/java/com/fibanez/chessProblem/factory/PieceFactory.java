@@ -8,7 +8,9 @@ import com.fibanez.chessProblem.model.*;
  *
  * @author fibanez
  */
-public class PieceFactory {
+public final class PieceFactory {
+
+    private PieceFactory() {}
 
     public static ChessPiece create(String symbol) {
         PieceEnum pieceEnum = PieceEnum.getPieceBySymbol(symbol);
