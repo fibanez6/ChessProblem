@@ -27,14 +27,11 @@ public class ChessProblem {
 
     public void resolve() {
         LinkedList<ChessPiece> buffer = Arrays.stream(pieces).collect(Collectors.toCollection(LinkedList::new));
-
         Map<String, Point> lastPositionByType = new HashMap<>();
-
         resolve(buffer,lastPositionByType);
     }
 
-    public void resolve(LinkedList<ChessPiece> buffer, Map<String, Point> lastPositionByType) {
-
+    private void resolve(LinkedList<ChessPiece> buffer, Map<String, Point> lastPositionByType) {
         // solution base
         if (buffer.isEmpty()) {
             board.print();
@@ -56,7 +53,6 @@ public class ChessProblem {
 
         for (int row = startRow; row < board.getNumRows(); row++) {
             for (int col = startCol; col < board.getNumCols(); col++) {
-
                 pieceToPut.setPosition(row, col);
 
                 if (!board.isValid(pieceToPut)) {
@@ -74,7 +70,7 @@ public class ChessProblem {
             startCol = 0;
         }
 
-        // returns the removed piece in the buffer
+        // returns the removed piece to the buffer
         pieceToPut.setPosition(0,0);
         buffer.addFirst(pieceToPut);
         lastPositionByType.remove(pieceToPut.toString());

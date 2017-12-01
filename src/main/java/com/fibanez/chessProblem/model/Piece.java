@@ -7,7 +7,7 @@ import java.awt.*;
  */
 public abstract class Piece implements ChessPiece {
 
-    private Point position;
+    private final Point position;
 
     public Piece() {
         this.position = new Point(0,0);
